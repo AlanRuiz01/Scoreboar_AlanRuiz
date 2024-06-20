@@ -21,19 +21,19 @@ function addPoints(team, pointsToAdd) {
     }
 }
 
-function add1(team) {
+export function add1(team) {
     addPoints(team, 1);
 }
 
-function add2(team) {
+export function add2(team) {
     addPoints(team, 2);
 }
 
-function add3(team) {
+export function add3(team) {
     addPoints(team, 3);
 }
 
-function reset(){
+export function reset(){
     points.team1 = 0;
     points.team2 = 0;
     scoreTeam1.textContent = points.team1;
@@ -42,7 +42,7 @@ function reset(){
 
 // Timer Functions
 
-function startTimer() {
+export function startTimer() {
     if (!isRunning) {
         const minutesInput = document.getElementById('minutesInput').value;
         if (minutesInput && minutesInput > 0) {
@@ -55,18 +55,18 @@ function startTimer() {
     }
 }
 
-function pauseTimer() {
+export function pauseTimer() {
     isRunning = false;
     clearInterval(timerInterval);
 }
 
-function resetTimer() {
+export function resetTimer() {
     pauseTimer();
     totalTime = 0;
     updateTimerDisplay();
 }
 
-function updateTimer() {
+  function updateTimer() {
     if (totalTime > 0) {
         totalTime -= 1;
         updateTimerDisplay();

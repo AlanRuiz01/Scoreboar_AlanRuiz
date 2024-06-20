@@ -35,6 +35,16 @@
             </div>
         </div>
       
-        <script src="index.js" type="module"></script>
+        <script type="module">
+            import { add1, add2, add3, reset, startTimer, pauseTimer, resetTimer } from './index.js';
+    
+            window.add1 = add1;
+            window.add2 = add2;
+            window.add3 = add3;
+            window.reset = reset;
+            window.startTimer = startTimer;
+            window.pauseTimer = pauseTimer;
+            window.resetTimer = resetTimer;
+        </script>
     </body>
 </html>
